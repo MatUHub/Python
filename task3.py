@@ -19,23 +19,23 @@ while a < count:
     
 print(f'Получившися список чисел {sp1}')
 
-max = sp1[0]
-min = sp1[0]
+for i in range (len(sp1)):
+     sp2.append(sp1[i]-int(sp1[i]))
 
-for i in range(len(sp1)):
-    if max < sp1[i]: max = sp1[i]
-    if min > sp1[i]: min = sp1[i]
+max = sp2[0]
+min = sp2[0]
 
-print(f'максимальное чило в списке {max}')
-print(f'минимальное  чило в списке {min}')
+for i in range(len(sp2)):
+    if(sp2[i] != 0):
+     if max < sp2[i]: max = sp2[i]
+     if min > sp2[i]: min = sp2[i]
 
-drob1 = max - int(max)
-drob2 = min - int(min)
+max = round(max, 3)     
+min = round(min, 3)
 
-print(f'дробная часть максимального числа {round(drob1, 3)}')
-print(f'дробная часть минимального числа {round(drob2, 3)}')
+print(f'максимальное значение дробной части в списке {max}')
+print(f'минимальное значение дробной части в списке {min}')
 
-if drob1 <= drob2: dif = drob2 - drob1
-else: dif = drob1 - drob2
+dif = max - min
 
 print(f'разница между максимальным и минимальным значением дробной части {round(dif, 3)}')
