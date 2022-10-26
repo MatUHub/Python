@@ -52,3 +52,7 @@ for i in sp:
 
 sp = ' '.join(sp)
 print(f'Текст после исключений слов с "абв": {sp}')
+
+with open('fileCor.txt', 'w', encoding='utf-8') as data:
+    data.write(sp)
+print('создан файл fileCor.txt')    
