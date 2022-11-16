@@ -44,8 +44,9 @@ def human_move():
         return False
 
 def computer_move():
+    print('Ход компьютера')
     while True:
-        print('Ход компьютера')
+        
         x = random.randint(0, 2)
         y = random.randint(0, 2)
         if field[x][y] == "X" or field[x][y] == "0": continue
@@ -124,9 +125,10 @@ def full_field():
 
 show_field()
 while True:
-    full_field()
+    
     human_win()
     computer_win()
+    full_field()
 
     if count == 0:
         human_move()
