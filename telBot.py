@@ -22,7 +22,7 @@ translate = False
 @bot.message_handler(commands=['start'])
 def start_message(message):
     l.logger_calc(message.text)
-    bot.send_message(message.chat.id, "Ready")
+    bot.send_message(message.chat.id, "Бот запущен!")
 
 @bot.message_handler(commands=['calc'])
 def calc_message(message):
